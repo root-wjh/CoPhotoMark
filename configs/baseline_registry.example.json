@@ -1,0 +1,6 @@
+[
+  {"method":"CoPhotoMark-full64", "provenance":"author_reproduced", "status":"pending_large_scale_run", "config":"configs/full64.json", "total_payload_bits":64, "tag_bits":48, "geometry":"same native source images and detector ROI", "quality":"full Y and enrolled ROI union Y reported separately"},
+  {"method":"ROI-DCT-QIM-control", "provenance":"author_reproduced", "status":"pending_large_scale_run", "config":"configs/roi_qim64.json", "total_payload_bits":64, "tag_bits":48},
+  {"method":"External learned baseline - replace with verified method", "provenance":"author_reproduced", "status":"not_implemented", "paper_doi":null, "repository_commit":null, "checkpoint_sha256":null, "payload_bits":null, "resolution":null, "result_file":null},
+  {"method":"Literature-only context - replace with verified source", "provenance":"literature_context", "status":"not_comparable_under_unified_protocol", "paper_doi":null, "table_or_page":null, "do_not_rank_with_reproduced_results":true}
+]

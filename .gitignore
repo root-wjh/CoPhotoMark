@@ -1,0 +1,45 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# ---- IDE / OS ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ---- 密钥（绝对不能上传）----
+keys/
+**/key_*.json
+**/key0.json
+**/key1.json
+**/key2.json
+**/wrong_keys/
+**/*master_key_hex*
+
+# ---- 数据（版权，只写 URL）----
+assets/
+data/
+datasets/
+
+# ---- 运行产物（只保留校准结果）----
+runs/*
+!runs/wider_threshold_rev2/
+audit/
+
+# ---- verification 只留顶层 json ----
+verification/attack_generation_smoke/
+verification/real_image_smoke/
+verification/synthetic_protocol/
+verification/attack_update_backup_*/
+
+# ---- 本地脚本（路径写死，审稿人跑不了）----
+*.ps1

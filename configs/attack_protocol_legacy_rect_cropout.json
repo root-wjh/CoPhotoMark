@@ -1,0 +1,6 @@
+[
+  {"name": "jpeg", "quality": 50, "label": "genuine"},
+  {"name": "cropout", "area_fraction": 0.3, "fill": 127, "label": "stress"},
+  {"name": "crop", "crop_ratio": 0.965, "restore_size": true, "label": "stress"},
+  {"name": "blur", "sigma": 2.0, "kernel": 5, "label": "genuine"}
+]

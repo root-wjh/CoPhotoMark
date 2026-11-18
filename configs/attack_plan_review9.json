@@ -1,0 +1,13 @@
+[
+  {"name": "clean", "label": "genuine"},
+  {"name": "metadata_strip", "label": "genuine"},
+  {"name": "jpeg", "quality": 85, "label": "genuine"},
+  {"name": "jpeg", "quality": 50, "label": "genuine"},
+  {"name": "resize", "scale": 0.5, "label": "genuine"},
+  {"name": "resize", "scale": 0.9, "label": "genuine"},
+  {"name": "stretch", "scale_x": 1.2, "scale_y": 0.8, "label": "genuine"},
+  {"name": "rotate", "degrees": 5, "label": "genuine"},
+  {"name": "screenshot_simulation", "scale": 0.75, "quality": 85, "label": "genuine"},
+  {"name": "platform_simulation", "rounds": 3, "scale_per_round": 0.9, "quality": 80, "label": "genuine"},
+  {"name": "format_conversion", "extension": ".webp", "label": "genuine"}
+]

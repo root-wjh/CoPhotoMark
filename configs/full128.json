@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "payload_bits": 128,
+  "block": 16,
+  "stride": 16,
+  "step": 18,
+  "min_roi": 64,
+  "min_blocks": 3,
+  "variant": "full",
+  "blind_blocks": [
+    12,
+    16,
+    20,
+    24
+  ],
+  "max_candidates": 32,
+  "blind_offsets": [
+    0,
+    -1,
+    1,
+    -2,
+    2
+  ],
+  "min_std": 2,
+  "min_pixel": 5,
+  "max_pixel": 250,
+  "max_faces": 255
+}

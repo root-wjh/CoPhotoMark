@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "payload_bits": 64,
+  "block": 12,
+  "stride": 12,
+  "step": 18,
+  "min_roi": 64,
+  "min_blocks": 3,
+  "variant": "roi_qim",
+  "blind_blocks": [
+    12,
+    16,
+    20,
+    24
+  ],
+  "max_candidates": 160,
+  "blind_offsets": [
+    0,
+    1,
+    -1,
+    2,
+    -2,
+    3,
+    -3,
+    4,
+    -4,
+    5,
+    -5,
+    6
+  ],
+  "min_std": 2,
+  "min_pixel": 5,
+  "max_pixel": 250,
+  "max_faces": 255
+}

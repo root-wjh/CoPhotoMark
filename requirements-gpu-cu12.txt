@@ -1,0 +1,3 @@
+# Linux image with CUDA 12.x and cuDNN 9.x. Driver support alone is insufficient.
+-r requirements-common.txt
+onnxruntime-gpu==1.19.2
