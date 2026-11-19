@@ -1,3 +1,0 @@
-mode,threshold,tau,clean_images,clean_acceptance,genuine_trials,genuine_acceptance,negative_trials,image_far
-auto,1.0,0,20,1.0,40,0.8,160,0.0
-blind,0.8125,9,20,0.6,40,0.6,160,0.0

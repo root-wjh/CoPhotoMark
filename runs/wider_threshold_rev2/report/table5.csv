@@ -1,6 +1,0 @@
-﻿Query Type,Face-Set Tag Score,Threshold,Tau,Decision,Structural OK,Source,Reason,Image
-Original,1.0,0.8125,9,ACCEPTED,True,wider_family_group:026b8600e2fa400b7082,complete_unique_set,D:\code-skills\test-ppt\threshold_revision\runs\wider_threshold_20261110\attacks\images\576c87421039fe926d1dd48c.png
-Benign Edit (JPEG Q95),0.0,0.8125,9,REJECTED,False,wider_family_group:026b8600e2fa400b7082,inconsistent_counts,D:\code-skills\test-ppt\threshold_revision\runs\wider_threshold_20261110\attacks\images\2bbb18a34833b06c465b1102.png
-Face Replacement,0.0,0.8125,9,REJECTED,False,wider_family_group:026b8600e2fa400b7082,invalid_or_missing_face_evidence,D:\code-skills\test-ppt\threshold_revision\runs\wider_threshold_20261110\attacks\images\5ed6239855661be21c01f1b3.png
-Seamless Face Swap,0.0,0.8125,9,REJECTED,False,wider_family_group:026b8600e2fa400b7082,invalid_or_missing_face_evidence,D:\code-skills\test-ppt\threshold_revision\runs\wider_threshold_20261110\attacks\images\0e24b4adb6fd7c5d5c354674.png
-Cross-image Collage,0.0,0.8125,9,REJECTED,False,wider_family_group:026b8600e2fa400b7082,invalid_or_missing_face_evidence,D:\code-skills\test-ppt\threshold_revision\runs\wider_threshold_20261110\attacks\images\d5a5d2f6eede8ea66e2477c7.png

@@ -1,3 +1,0 @@
-﻿Mode,Runtime (ms/img),Tag BAR (%) valid decoded faces,Acceptance Rate (%),Threshold,Tau,Test FAR (%) all negatives,Clean FRR (%),Clean images,Actual metadata route,Actual blind route
-Metadata-assisted (auto fallback),132.49717812510653,100.0,100.0,1.0,0,0.0,0.0,32,32,0
-Blind fallback,1174.541206250126,94.8982939632546,62.5,0.8125,9,0.0,37.5,32,0,32
