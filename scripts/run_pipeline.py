@@ -1,4 +1,3 @@
-"""One-config complete experiment. Does not copy or alter input datasets."""
 import argparse
 import os
 import subprocess
