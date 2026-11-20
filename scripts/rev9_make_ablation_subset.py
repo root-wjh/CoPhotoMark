@@ -1,9 +1,3 @@
-"""Freeze a paired ablation subset from the main run (comment 5).
-
-Selection rule (fixed before looking at any score): all successfully enrolled
-VALIDATION sources of the first key, plus the same number of TEST sources sorted
-by source_id.  Splits are inherited from the main run.
-"""
 import sys
 from pathlib import Path
 
