@@ -1,15 +1,3 @@
-"""Parallel wrapper around `cophotomark evaluate`.
-
-Splits a filtered trial set into K chunks, runs one evaluate subprocess per
-chunk, and concatenates scores.jsonl (order preserved).  Used to keep the
-large review-9 runs tractable; results are identical to a serial run because
-trials are independent and each row records its own timings.
-
-Usage:
-  python scripts/rev9_eval_parallel.py --trials RUN/attacks/trials.jsonl \
-      --split test --config configs/full64.json --calibration RUN/calibration.json \
-      --output RUN/test --workers 4 [--provider cuda]
-"""
 import argparse
 import subprocess
 import sys
