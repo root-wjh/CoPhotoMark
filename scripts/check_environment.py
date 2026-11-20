@@ -1,4 +1,3 @@
-"""Load and run the actual ONNX detector; fail on unavailable GPU sessions."""
 import argparse
 import sys
 from pathlib import Path
