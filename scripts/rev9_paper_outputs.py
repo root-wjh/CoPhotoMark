@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-"""Generate paper-ready figures and LaTeX tables (review comments 1-9) from rev9 runs.
-
-Output -> C:\\Users\\dell'\\Documents\\Trae-CN\\temp_20261104_01\\paper_deliverables
-"""
 import json
 import csv
 import os
