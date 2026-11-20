@@ -15,11 +15,6 @@ def _y(image):
 
 
 def _write_y_bits(image, bits):
-    """Write bits into the first len(bits) raster LSB positions of Y.
-
-    Guarantees every bit reads back after BGR->YCrCb reconversion; raises
-    RuntimeError if a pixel cannot be placed (not observed on natural images).
-    """
     bits = np.asarray(bits, dtype=np.uint8)
     if bits.ndim != 1 or bits.size == 0 or np.any((bits != 0) & (bits != 1)):
         raise ValueError("bits must be a non-empty 0/1 array")
@@ -29,10 +24,6 @@ def _write_y_bits(image, bits):
     count = bits.size
     if count > flat.size:
         raise ValueError("Image has too few luminance pixels for the metadata frame")
-    # Search nearest alternative Y values by |delta|: +1,-1,+2,-2,...
-    # Deltas are not restricted to odd numbers because OpenCV's fixed-point
-    # round trip has per-pixel systematic rounding bias; we accept whatever
-    # nearby value actually reads back with the requested LSB.
     deltas = np.array([d for k in range(1, _MAX_DELTA_ATTEMPTS + 1)
                        for d in (k, -k)], dtype=np.int16)
     chosen = np.zeros(count, dtype=np.int16)
@@ -76,11 +67,6 @@ def _read_bits(image, count):
 
 
 def extract_metadata_lsb(image):
-    """Read and JSON-parse embedded metadata; return None when absent/corrupt.
-
-    Never raises: a damaged channel must behave as "no metadata" so callers
-    safely fall back to blind verification.
-    """
     try:
         if image.ndim != 3 or image.shape[2] != 3:
             return None
@@ -109,12 +95,6 @@ def extract_metadata_lsb(image):
 
 
 def strip_metadata_lsb(image):
-    """Erase the embedded channel (simulates a platform that sanitises it).
-
-    Zeros the header and, when readable, the payload region. This changes
-    pixels and can perturb DCT coefficients: blind recovery is measured,
-    never assumed to be unaffected.
-    """
     flat = _y(image).reshape(-1)
     if flat.size < HEADER_BITS:
         return image.copy()
