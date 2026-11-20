@@ -1,4 +1,3 @@
-"""Legacy crop/blur/JPEG protocol plus explicitly defined rectangular Cropout."""
 from __future__ import annotations
 import math
 import random
