@@ -1,29 +1,3 @@
-"""Image-embedded LSB metadata channel.
-
-Paper alignment: Algorithm 1 "optionally embed (M, sigma_meta) into Y" and
-Algorithm 2 "ExtractLSB(Y)". The enrollment metadata M (including its HMAC
-sigma_meta) is therefore carried INSIDE the delivered PNG, in the least
-significant bits of the luminance (Y) plane. Verification still requires the
-secret key and trusted expected claim. A sidecar .cpm.json is an optional debug
-copy and is never opened on the default verification path.
-
-Bit frame, written into Y-plane LSBs in raster order:
-    magic b"CPM1" (32 bits) | uint32 BE payload byte length (32 bits)
-    | canonical compact JSON payload (the full metadata object incl. HMAC)
-
-Security: extraction yields raw JSON only; engine.validate_metadata re-checks
-the HMAC under the domain-separated metadata subkey. Any single-bit corruption
-(JPEG recompression, blur, cropping, geometry edits, pixel moves) therefore
-invalidates the whole channel; verification then falls back to the blind
-pipeline (metadata loss -> blind verify). Not every image edit necessarily
-damages the frame, and LSB erasure can also perturb DCT evidence.
-
-Implementation note: not every Y LSB survives OpenCV's 8-bit BGR<->YCrCb
-fixed-point round trip (~0.2% flip on random pixels). For each requested bit
-we search nearby luminance values (+/-1, +/-2, ... by increasing distance)
-for one whose round-tripped LSB equals the requested bit. On natural images
-the final bitstream is verified; there is no universal perceptual bound.
-"""
 from __future__ import annotations
 import json
 import cv2
