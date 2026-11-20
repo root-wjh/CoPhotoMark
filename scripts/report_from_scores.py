@@ -1,8 +1,3 @@
-"""Re-render Tables 5/8 and the ROC report from frozen validation/test scores.
-
-This never re-evaluates images and never reads test rows during calibration:
-the calibration file must have been produced from the validation split only.
-"""
 from __future__ import annotations
 
 import argparse
