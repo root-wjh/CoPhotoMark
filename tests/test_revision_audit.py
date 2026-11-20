@@ -1,4 +1,3 @@
-"""Regression checks for actual protocol/experimental validity defects."""
 from types import SimpleNamespace
 import sys
 import numpy as np
