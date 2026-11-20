@@ -1,4 +1,3 @@
-"""Natural group-size study with a prespecified, outcome-blind quality control."""
 import sys
 sys.path.insert(0,'D:/CoPhotoMark_Revision')
 from pathlib import Path
