@@ -1,4 +1,3 @@
-"""Read-only source images; writes exclusively to the new revision output."""
 import sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
