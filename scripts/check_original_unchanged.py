@@ -1,4 +1,3 @@
-"""Read-only SHA256 comparison against the source snapshot created before authoring."""
 import hashlib
 import json
 from pathlib import Path
