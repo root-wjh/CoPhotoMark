@@ -1,15 +1,3 @@
-"""Offline ROC/FAR/FRR and frozen-threshold report from validation scores.
-
-Usage:
-  python scripts/calibrate_scores.py \
-      --scores  runs/<run>/validation/scores.jsonl \
-      --config  configs/full64_step18.json \
-      --sources runs/<run>/sources.jsonl \
-      --output  runs/<run>/calibration_report
-
-Reads only the held-out validation split.  No test row is read, so the report
-cannot re-tune a threshold on test outcomes.
-"""
 from __future__ import annotations
 
 import argparse
