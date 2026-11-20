@@ -1,4 +1,3 @@
-"""Compatibility checks against frozen original operations, including odd dimensions."""
 import random
 import cv2
 import numpy as np
