@@ -1,7 +1,0 @@
-{
-  "pytest": "26 passed",
-  "python_compileall": "passed",
-  "original_sources": "71 source/requirements files unchanged by SHA256",
-  "real_image_smoke": "4 images; 3 accepted both modes, 1 partial enrollment nonaccepted",
-  "scope": "engineering verification only"
-}
