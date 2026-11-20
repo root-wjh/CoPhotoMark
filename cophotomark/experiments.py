@@ -372,12 +372,6 @@ def far_curve(rows):
     return output
 
 def summarize_r9(rows, enrollments):
-    """R9 supplementary metrics: curves vs. enrollment count N and per-face size.
-
-    Aggregates undecidable/exclusion rates by (mode, N) and by
-    (mode, face-size-band) for benign operations, complementing the
-    per-attack summarize() table with population-level curves.
-    """
     # --- Undecidable / acceptance rate vs. enrollment face count N ---
     n_groups = defaultdict(list)
     for row in rows:
@@ -411,7 +405,6 @@ def summarize_r9(rows, enrollments):
             "benign_count": len(benign),
         })
 
-    # --- Per-face short-edge size analysis (from enrollment records) ---
     face_size_rows = []
     for rec in enrollments or []:
         if rec.get("status") != "enrolled":
