@@ -1,4 +1,3 @@
-"""Expanded natural WIDER availability study; checkpoints every source image."""
 import sys
 from pathlib import Path
 sys.path.insert(0,'D:/CoPhotoMark_Revision')
