@@ -1,20 +1,3 @@
-# -*- coding: utf-8 -*-
-"""R10 paper outputs: easy-cohort re-run, 64-bit score normalization (paper style).
-
-Score convention (aligned with the manuscript):
-  face score s64 = (matched structural bits + matched tag bits) / 64
-  structural bits = 16 (8-bit count + 8-bit ordinal), credited only when the
-  header decodes to a plausible value; tag = 48 HMAC bits.
-Set score = minimum face score (decision-aligned).  Outcomes:
-  ACCEPTED    : detected == enrolled N, all headers decode, decoded
-                (count, ordinal) set == expected, min face score >= gamma
-  REJECTED    : evidence available but inconsistent (count mismatch, missing
-                /repeated ordinal, extra face) or min score < gamma
-  UNDECIDABLE : no face yields decodable evidence at all
-Operating points: gamma = 1.0 (metadata), 0.8125 and 0.6667 (blind).
-
-Output -> paper_deliverables (tables.tex + figs).
-"""
 import json
 import csv
 import math
