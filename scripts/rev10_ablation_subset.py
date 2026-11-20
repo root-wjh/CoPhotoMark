@@ -1,14 +1,3 @@
-"""Freeze the paired ablation subset for the R10 re-run (comment 5).
-
-Selection rule (fixed before looking at any variant score): every MULTI-FACE
-source of the registered cohort of the full64 protocol -- i.e. sources whose
-pristine file passes a round-trip verification in both modes (metadata gamma
-1.0 / blind gamma 0.8125) on the main run.  Splits are inherited from the
-main run.
-
-Usage:
-  python scripts/rev10_ablation_subset.py RUN_DIR OUT.jsonl
-"""
 import sys
 from collections import defaultdict
 from pathlib import Path
