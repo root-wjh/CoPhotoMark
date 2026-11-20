@@ -1,34 +1,3 @@
-"""Validation-based threshold calibration for the 48-bit authenticated tag.
-
-Paper Eq. (8) must use the tag length B = L - 16, not the full payload L:
-the 8-bit count and 8-bit ordinal are checked exactly, so the only graded
-statistic is the tag-match rate s = 1 - d_H(tag)/B.  With B = 48 the two
-reported thresholds are exact multiples of 1/B:
-
-    1.0000  <-> tau=0   (metadata-assisted, exact localization)
-    0.8125  <-> tau=9   (blind fallback and set-level co-photo decision)
-
-The legacy 0.6667 <-> tau=16 is NOT used: on the WIDER validation split it
-triples the per-face FAR (3.1% vs 0%) without lowering FRR, so tau=9 dominates
-it under every budget in this file.
-
-Selection rule (one rule, two budgets):
-
-    tau* = max { tau : N_faces * P_fa(tau) <= budget },
-
-    P_fa(tau) = 2^-B sum_{i=0}^{tau} C(B, i)
-
-where P_fa is the independent-uniform wrong-key reference for ONE tag test,
-and N_faces is 1 for a single ROI and the supported group size for a face set
-(union bound).  The structural count/ordinal check can only remove candidates,
-so this remains an upper bound on the operational FAR even when it is loose.
-
-Budgets are design requirements tied to the cost of a false acceptance in each
-decision unit, not values fitted on the reported test tables.  The validation
-split is used to (i) report the empirical ROC/FAR/FRR, (ii) verify that no
-false accept occurs at the frozen point, and (iii) reject leakage.  It is not
-used to re-tune the budget after seeing test results.
-"""
 from __future__ import annotations
 
 import hashlib
