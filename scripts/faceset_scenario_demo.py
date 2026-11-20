@@ -1,15 +1,3 @@
-"""Face-set tampering scenario driver (R1-1 / Table5-Figure5 reviewer request).
-
-Scenarios exercised on REAL detected multi-face images:
-  delete / duplicate / reorder / insert_unmarked / insert_marked /
-  copy_marked_face / replace / watermark_transplant / boundary_tamper /
-  erase_reembed_wrong_key / detector_miss_control.
-
-This is a SMALL-SCALE engineering demo with the conservative uncalibrated
-exact-tag-match working point. The paper-strength result must use
-scripts/run_pipeline.py on the full multi-face corpus with independent
-validation calibration. Input images are only read, never modified.
-"""
 import argparse
 import json
 import hashlib
