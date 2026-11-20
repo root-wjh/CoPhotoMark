@@ -1,4 +1,3 @@
-"""Held-out WIDER calibration and paper Tables 5/8. No test-set tuning."""
 from __future__ import annotations
 import argparse
 import hashlib
