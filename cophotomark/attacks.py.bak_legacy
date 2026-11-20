@@ -1,4 +1,3 @@
-"""Reproducible digital transforms; simulations are explicitly labeled."""
 from __future__ import annotations
 import math
 import cv2
