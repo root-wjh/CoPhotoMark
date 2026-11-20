@@ -1,4 +1,3 @@
-"""Read-only stratification of recorded test decisions; never tunes thresholds."""
 from __future__ import annotations
 import argparse
 import csv
