@@ -1,4 +1,3 @@
-"""Clean drift/real-detector diagnostics that earlier fixed-frame tests missed."""
 from dataclasses import replace
 import numpy as np
 import pytest
