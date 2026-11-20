@@ -1,4 +1,3 @@
-"""Inspect saved logs only; no detector, watermark inference, or key loading."""
 import argparse
 import sys
 from pathlib import Path
