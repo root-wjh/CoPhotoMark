@@ -1,4 +1,3 @@
-"""Offline diagnosis of existing clean logs; never changes protocol decisions."""
 from pathlib import Path
 from .detector import iou
 from .io import read_image, read_jsonl, write_csv, write_json
