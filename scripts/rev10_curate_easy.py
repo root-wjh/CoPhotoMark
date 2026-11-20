@@ -1,16 +1,3 @@
-# -*- coding: utf-8 -*-
-"""Curate the 'easy' WIDER cohort for the revision re-run.
-
-Selects images whose every detected face is large (short edge >= 128 px) and
-qualified (>= 3 blocks), 2-3 faces for the multi-face cohort plus a small
-single-face cohort for the N=1 row.  Per-event cap for diversity.
-
-Usage:
-  python scripts/rev10_curate_easy.py \
-      --inventory runs/rev10_easy_20261116/wider_pool_inventory.jsonl \
-      --images-root D:\\WIDER_train\\images \
-      --output assets/wider_easy_r10 --multi 32 --single 8
-"""
 import argparse
 import json
 import shutil
